@@ -12,8 +12,8 @@ for notes on deploying the project on a live system.
 ### Prerequisiti
 
 Dataset necessari per il training delle CNN:
-- [Road Extraction Dataset]([https://www.example.com](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset))
-- [Massachusetts Buildings Dataset]([https://www.example.com](https://www.kaggle.com/datasets/balraj98/massachusetts-buildings-dataset/code))
+- [Road Extraction Dataset](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset)
+- [Massachusetts Buildings Dataset](https://www.kaggle.com/datasets/balraj98/massachusetts-buildings-dataset/code)
 
 Requisiti software per il training:
 - GPU con RAM >= 8Gb
