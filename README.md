@@ -51,7 +51,6 @@ Checks if the best practices and the right coding style has been used.
 
 Add additional notes to deploy this on a live system
 
-## Authors
+## Autore
 
-  - **Andrea Alboni** - *Provided README Template* -
-    [PurpleBooth](https://github.com/PurpleBooth)
+  - **Andrea Alboni** 
