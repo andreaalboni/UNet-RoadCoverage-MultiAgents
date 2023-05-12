@@ -11,9 +11,13 @@ for notes on deploying the project on a live system.
 
 ### Prerequisiti
 
-Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
+Dataset necessari per il training delle CNN:
+- [Road Extraction Dataset]([https://www.example.com](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset))
+- [Massachusetts Buildings Dataset]([https://www.example.com](https://www.kaggle.com/datasets/balraj98/massachusetts-buildings-dataset/code))
+
+Requisiti software per il training:
+- GPU con RAM >= 8Gb
+- NVIDIA GPU Drivers and [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit)
 
 ### Installazione
 
