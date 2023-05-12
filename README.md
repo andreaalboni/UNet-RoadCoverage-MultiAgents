@@ -53,7 +53,7 @@ Checks if the best practices and the right coding style has been used.
 
 ## Deployment
 
-Link per il download dei modelli pronti per l'uso:
+Link per il download dei modelli, in formato ".h5", pronti per l'utilizzo:
 - [Road Extraction Model](https://drive.google.com/drive/folders/10OhATr5yw4W3w6G5TT9FQhGsPuIgmjXS?usp=share_link)
 - [Buildings Detection Model](https://drive.google.com/drive/folders/10OhATr5yw4W3w6G5TT9FQhGsPuIgmjXS?usp=share_link)
 
