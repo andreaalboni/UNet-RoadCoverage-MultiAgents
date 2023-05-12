@@ -3,3 +3,4 @@
 # In order to train run "Train.py"
 # Trained model download link: ""
 # In order to test run "Test.py"
+# Model used: U-Net, Architecture: "UNet.py"
