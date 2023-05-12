@@ -54,8 +54,8 @@ Checks if the best practices and the right coding style has been used.
 ## Deployment
 
 Link per il download dei modelli, in formato ".h5", pronti per l'utilizzo:
-- [Road Extraction Model](https://drive.google.com/drive/folders/10OhATr5yw4W3w6G5TT9FQhGsPuIgmjXS?usp=share_link)
-- [Buildings Detection Model](https://drive.google.com/drive/folders/10OhATr5yw4W3w6G5TT9FQhGsPuIgmjXS?usp=share_link)
+- [Road Extraction Model](https://drive.google.com/file/d/1dfdPuzAOjxv7tyFnCo3qPSDg3BL5kKfM/view?usp=sharing)
+- [Buildings Detection Model](https://drive.google.com/file/d/15yyEJvJOZt-Vyrrf1LVo7sACHjIAR_w8/view?usp=sharing)
 
 ## Autore
 
