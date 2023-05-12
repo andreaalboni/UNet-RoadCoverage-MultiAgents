@@ -1,4 +1,4 @@
-# Road extraction and Building detection from aerial imagery 
+# Road Extraction and Building Detection from Aerial Imagery 
 
 L'obiettivo del progetto è creare e trainare due U-Net, CNN sviluppate per la segmentazione semantica, con lo scopo di, data un'immagine aerea, estrarre la rete 
 stradale ed individuare gli edifici presenti.  
@@ -53,7 +53,9 @@ Checks if the best practices and the right coding style has been used.
 
 ## Deployment
 
-Add additional notes to deploy this on a live system
+Link per il download dei modelli pronti per l'uso:
+- [Road Extraction Model](https://drive.google.com/drive/folders/10OhATr5yw4W3w6G5TT9FQhGsPuIgmjXS?usp=share_link)
+- [Buildings Detection Model](https://drive.google.com/drive/folders/10OhATr5yw4W3w6G5TT9FQhGsPuIgmjXS?usp=share_link)
 
 ## Autore
 
