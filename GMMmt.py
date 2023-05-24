@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 from matplotlib import cm
 
 my_dpi = 96
-DIM_MT_IMG = [300, 200]
+DIM_MT_IMG = [500, 500]
 COMPONENTS_NUM = 20
 
 def recompone_images(pat, x, y):
@@ -32,15 +32,18 @@ def predict(name):
     nc1 = int(image.shape[1] / 256.)
     image = image[0:nr1*256, 0:nc1*256]
 
-    if nr1 > nc1:
-        n = int( nr1/nc1 )
-        image1 = cv2.resize(image, (256,256*n))
+    #foto minori a 1024x1024 processate senza resize
+    if nr1 > 4 or nc1 > 4:
+        if nr1 > nc1:
+            n = int( nr1/nc1 )
+            image1 = cv2.resize(image, (256,256*n))
+        else:
+            n = int( nc1/nr1 )
+            image1 = cv2.resize(image, (256*n,256))
+        nr = int(image1.shape[0] / 256.)
+        nc = int(image1.shape[1] / 256.)
     else:
-        n = int( nc1/nr1 )
-        image1 = cv2.resize(image, (256*n,256))
-
-    nr = int(image1.shape[0] / 256.)
-    nc = int(image1.shape[1] / 256.)
+        image1 = image
 
     model = tf.keras.models.load_model(r"C:\Users\albon\Downloads\MR-200-0.82-0.61.h5", compile=False)
     #model = tf.keras.models.load_model(r"C:\Users\albon\Downloads\RoadDetectionModel-0.615.h5", compile=False)
@@ -71,7 +74,10 @@ def predict(name):
         p = (p0 + p1 + p2 + p3) / 4
         mask_patches.append(p)
 
-    prediction = recompone_images(mask_patches, nc, nr)
+    if nr1 > 4 or nc1 > 4:
+        prediction = recompone_images(mask_patches, nc, nr)
+    else:
+        prediction = recompone_images(mask_patches, nc1, nr1)
     pred = (prediction > thresh).astype(np.uint8)
 
     #Prediction using blending patches
@@ -127,7 +133,6 @@ def main():
     name = filedialog.askopenfilename(title='Select an image:', filetypes=file_types, initialdir=path)
     image = predict(name)
     IMG_SIZE = image.shape
-    print(IMG_SIZE)
     plt.figure(figsize=(IMG_SIZE[0]/my_dpi, IMG_SIZE[1]/my_dpi), dpi=my_dpi)
     plt.title("Prediction")
     plt.imshow(image, cmap='gray')
