@@ -45,12 +45,6 @@ Explain what these tests test and why
 
     Give an example
 
-### Style test
-
-Checks if the best practices and the right coding style has been used.
-
-    Give an example
-
 ## Deployment
 
 Link per il download dei modelli, in formato ".h5", pronti per l'utilizzo:
