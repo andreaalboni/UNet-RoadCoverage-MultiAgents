@@ -30,7 +30,7 @@ On windows:
 
 On Linux:
 
-    git pull 
+    git pull https://github.com/andreaalboni/T-ML.git
 
 End with an example of getting some data out of the system or using it
 for a little demo
