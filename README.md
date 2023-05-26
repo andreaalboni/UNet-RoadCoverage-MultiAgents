@@ -37,7 +37,7 @@ for a little demo
 
 ## Running tests
 
-Per testare il modello allenato ottenuto, runnare il programma test sfruttando le immagini della cartella "test" del dataset
+Per testare il modello ottenuto, runnare il programma "test.py" sfruttando le immagini della cartella "test" del dataset
 
 ### Sample Tests
 
