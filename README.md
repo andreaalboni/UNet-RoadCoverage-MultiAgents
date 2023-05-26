@@ -37,7 +37,7 @@ for a little demo
 
 ## Running tests
 
-Explain how to run the automated tests for this system
+Per testare il modello allenato ottenuto, runnare il programma test sfruttando le immagini della cartella "test" del dataset
 
 ### Sample Tests
 
