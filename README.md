@@ -37,7 +37,9 @@ for a little demo
 
 ## Running tests
 
-Per testare il modello ottenuto, runnare il programma "test.py" sfruttando le immagini della cartella "test" del dataset
+Per testare il modello ottenuto, runnare il programma "test.py", il quale, dopo aver apportato oppurtune modifiche al percorso del modello, eseguirà una somma pesata sulle due predizioni 
+sull'immagine selezionata, restituendo la definitiva. Una di queste predizioni sfrutta il metodo "blending-patches", contenuto nel file "smooth predictions by blending patches", mentre l'altra 
+consiste nel predirre su ciascun patch, di 256x256 inn cui è scomposta l'immagine.
 
 ### Sample Tests
 
