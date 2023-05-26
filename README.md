@@ -24,17 +24,6 @@ Requisiti software per il training:
 A step by step series of examples that tell you how to get a development
 environment running
 
-On windows:
-
-    Give the example
-
-On Linux:
-
-    git pull https://github.com/andreaalboni/T-ML.git
-
-End with an example of getting some data out of the system or using it
-for a little demo
-
 ## Running tests
 
 Per testare il modello ottenuto, runnare il programma "test.py", il quale, dopo aver apportato oppurtune modifiche al percorso del modello, eseguirà una somma pesata sulle due predizioni 
