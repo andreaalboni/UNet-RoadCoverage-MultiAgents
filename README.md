@@ -5,7 +5,7 @@ stradale ed individuare gli edifici presenti.
 
 ## Getting Started
 
-Elenco e descrizione delle funzioni dei file presenti:
+Elenco e descrizione dei file presenti:
 - Unet.py                                   -> creazione della rete neurale, architettura U-Net
 - Train.py                                  -> train della rete neurale
 - Test.py                                   -> test della rete neurale su un'immagine di qualsiasi dimensione
