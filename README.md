@@ -5,9 +5,13 @@ stradale ed individuare gli edifici presenti.
 
 ## Getting Started
 
-These instructions will give you a copy of the project up and running on
-your local machine for development and testing purposes. See deployment
-for notes on deploying the project on a live system.
+Nella repo sono presenti i seguenti file:
+- Unet.py -> creazione della rete neurale, architettura U-Net
+- Train.py -> train della rete neurale
+- Test.py -> test della rete neurale su un'immagine di qualsiasi dimensione
+- smooth_predictions_by_blending_patches.py -> file richiesto dal test, migliora la precisione della predizione
+- full_img_gmm.py -> nodo publisher ROS per casi in cui si analizza tutto l'ambiente
+- img_select_gmm.py -> nodo publisher ROS per casi in cui si vuole selezionare una sola parte dell'ambiente
 
 ### Prerequisiti
 
