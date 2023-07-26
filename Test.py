@@ -82,26 +82,6 @@ predictions_smooth = predict_img_with_smooth_windowing(
 final_prediction = (predictions_smooth > thresh).astype(np.uint8)
 union_prediction = (((prediction + 2*predictions_smooth[:,:,0]) / 2) > thresh).astype(np.uint8)
 
-#plt.figure(figsize=(12, 12))
-#plt.subplot(221)
-#plt.title('Testing Image')
-#image1 = cv2.cvtColor(image1, cv2.COLOR_BGR2RGB)
-#plt.imshow(image1)
-#plt.subplot(222)
-#plt.title('Union Prediction')
-#plt.imshow(union_prediction, cmap='gray')
-#
-#image_overlapped = image1.copy()
-#for i in range(union_prediction.shape[0]):
-#    for j in range(union_prediction.shape[1]):
-#        if union_prediction[i,j] == 1:
-#            image_overlapped[i,j] = 255
-#
-#plt.subplot(223)
-#plt.title('Overlapped prediction')
-#plt.imshow(image_overlapped)
-#plt.show()
-
 iimmgg = image.copy()
 z = cv2.resize(union_prediction, (nc1*256, nr1*256))
 for i in range(z.shape[0]):
@@ -118,27 +98,5 @@ fig.add_subplot(2, 1, 2)
 plt.title('Test: Image Resize n*256 x n*256')
 iimmgg = cv2.cvtColor(iimmgg, cv2.COLOR_BGR2RGB)
 plt.imshow(iimmgg)
-
-#fig.add_subplot(3, 1, 3)
-#plt.title('Test: Image Resize 256 x 256')
-#
-#im = cv2.resize(image, (256, 256)) / 255.
-#p0 = model.predict(np.expand_dims(im, axis=0))[0][:, :, 0]
-#p1 = model.predict(np.expand_dims(np.fliplr(im), axis=0))[0][:, :, 0]
-#p1 = np.fliplr(p1)
-#p2 = model.predict(np.expand_dims(np.flipud(im), axis=0))[0][:, :, 0]
-#p2 = np.flipud(p2)
-#p3 = model.predict(np.expand_dims(np.fliplr(np.flipud(im)), axis=0))[0][:, :, 0]
-#p3 = np.fliplr(np.flipud(p3))
-#thresh = 0.2
-#p = (((p0 + p1 + p2 + p3) / 4) > thresh).astype(np.uint8)
-#i = cv2.resize(p, (nc1*256, nr1*256))
-#io = image.copy()
-#for k in range(i.shape[0]):
-#    for j in range(i.shape[1]):
-#        if i[k,j] == 1:
-#            io[k,j] = 255
-#plt.imshow(io)
-#
 
 plt.show()
