@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<launch>
+	<arg name="ROBOTS_NUM" default="10" />
+	<arg name="SIM" default="True" />
+	<arg name="ROBOT_RANGE" default="10" />
+
+	<arg name="GRAPHICS_ON" default="True" />
+
+	<arg name="AREA_SIZE_x" default="360" />
+	<arg name="AREA_SIZE_y" default="170" />
+	<arg name="AREA_LEFT" default="-10" />
+	<arg name="AREA_BOTTOM" default="-10" />
+
+
+	<node pkg="gmm_coverage" type="centralized_gmm" name="simulation" output="screen">
+		<param name="ROBOTS_NUM" value="$(arg ROBOTS_NUM)" />
+		<param name="SIM" value="$(arg SIM)" />
+		<param name="ROBOT_RANGE" value="$(arg ROBOT_RANGE)" />
+
+		<param name="GRAPHICS_ON" value="$(arg GRAPHICS_ON)" />
+		
+		<param name="AREA_SIZE_x" value="$(arg AREA_SIZE_x)" />
+		<param name="AREA_SIZE_y" value="$(arg AREA_SIZE_y)" />
+		<param name="AREA_LEFT" value="$(arg AREA_LEFT)" />
+		<param name="AREA_BOTTOM" value="$(arg AREA_BOTTOM)" />
+
+		<remap from="/turtlebot0/odom" to="/hummingbird0/ground_truth/odometry" />
+		<remap from="/turtlebot0/cmd_vel" to="/hummingbird0/autopilot/velocity_command" />
+
+		<remap from="/turtlebot1/odom" to="/hummingbird1/ground_truth/odometry" />
+		<remap from="/turtlebot1/cmd_vel" to="/hummingbird1/autopilot/velocity_command" />
+
+		<remap from="/turtlebot2/odom" to="/hummingbird2/ground_truth/odometry" />
+		<remap from="/turtlebot2/cmd_vel" to="/hummingbird2/autopilot/velocity_command" />
+
+		<remap from="/turtlebot3/odom" to="/hummingbird3/ground_truth/odometry" />
+		<remap from="/turtlebot3/cmd_vel" to="/hummingbird3/autopilot/velocity_command" />
+
+		<remap from="/turtlebot4/odom" to="/hummingbird4/ground_truth/odometry" />
+		<remap from="/turtlebot4/cmd_vel" to="/hummingbird4/autopilot/velocity_command" />
+
+		<remap from="/turtlebot5/odom" to="/hummingbird5/ground_truth/odometry" />
+		<remap from="/turtlebot5/cmd_vel" to="/hummingbird5/autopilot/velocity_command" />
+
+		<remap from="/turtlebot6/odom" to="/hummingbird6/ground_truth/odometry" />
+		<remap from="/turtlebot6/cmd_vel" to="/hummingbird6/autopilot/velocity_command" />
+
+		<remap from="/turtlebot7/odom" to="/hummingbird7/ground_truth/odometry" />
+		<remap from="/turtlebot7/cmd_vel" to="/hummingbird7/autopilot/velocity_command" />
+
+		<remap from="/turtlebot8/odom" to="/hummingbird8/ground_truth/odometry" />
+		<remap from="/turtlebot8/cmd_vel" to="/hummingbird8/autopilot/velocity_command" />
+
+		<remap from="/turtlebot9/odom" to="/hummingbird9/ground_truth/odometry" />
+		<remap from="/turtlebot9/cmd_vel" to="/hummingbird9/autopilot/velocity_command" />
+
+		<remap from="/turtlebot10/odom" to="/hummingbird10/ground_truth/odometry" />
+		<remap from="/turtlebot10/cmd_vel" to="/hummingbird10/autopilot/velocity_command" />
+
+		<remap from="/turtlebot11/odom" to="/hummingbird11/ground_truth/odometry" />
+		<remap from="/turtlebot11/cmd_vel" to="/hummingbird11/autopilot/velocity_command" />
+
+		<remap from="/turtlebot12/odom" to="/hummingbird12/ground_truth/odometry" />
+		<remap from="/turtlebot12/cmd_vel" to="/hummingbird12/autopilot/velocity_command" />
+
+		<remap from="/turtlebot13/odom" to="/hummingbird13/ground_truth/odometry" />
+		<remap from="/turtlebot13/cmd_vel" to="/hummingbird13/autopilot/velocity_command" />
+
+		<remap from="/turtlebot14/odom" to="/hummingbird14/ground_truth/odometry" />
+		<remap from="/turtlebot14/cmd_vel" to="/hummingbird14/autopilot/velocity_command" />
+
+		<remap from="/turtlebot15/odom" to="/hummingbird15/ground_truth/odometry" />
+		<remap from="/turtlebot15/cmd_vel" to="/hummingbird15/autopilot/velocity_command" />
+	
+	</node>
+
+<!-- RViz -->
+<node type="rviz" name="rviz" pkg="rviz" />
+</launch> 
