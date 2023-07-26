@@ -8,6 +8,7 @@ from patchify import patchify, unpatchify
 from matplotlib import pyplot as plt
 
 path = r"C:\Users\albon\Desktop"
+model_path = r"C:\Users\albon\Desktop\Test\Unet-MR.h5"
 file_types = [('Image', '*.jpg;*.png'), ('All files', '*')]
 name = filedialog.askopenfilename(title='Select an image:', filetypes=file_types, initialdir=path)
 image = cv2.imread(name, cv2.COLOR_BGR2RGB)
@@ -26,8 +27,7 @@ else:
 nr = int(image1.shape[0] / 256.)
 nc = int(image1.shape[1] / 256.)
 
-#model = tf.keras.models.load_model(r"C:\Users\albon\Downloads\MR-200-0.82-0.61.h5", compile=False)
-model = tf.keras.models.load_model(r"C:\Users\albon\Downloads\mB-210-0.64-0.58.h5", compile=False)
+model = tf.keras.models.load_model(model_path, compile=False)
 
 patch_size = 256
 patches = []
