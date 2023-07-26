@@ -12,7 +12,7 @@ Elenco e descrizione delle funzioni dei file presenti:
 - smooth_predictions_by_blending_patches.py -> file richiesto dal test, migliora la precisione della predizione
 - full_img_gmm.py                           -> nodo publisher ROS per casi in cui si analizza tutto l'ambiente
 - img_select_gmm.py                         -> nodo publisher ROS per casi in cui si vuole selezionare una sola parte dell'ambiente
-- Simulazione                               -> cartella contenente i launch file dei vari scenari per le simulazioni
+- Simulazioni                               -> cartella contenente i launch file dei vari scenari per le simulazioni
 
 ### Prerequisiti
 
