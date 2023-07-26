@@ -103,7 +103,7 @@ IMG_CHANNELS = x.shape[3]
 input_shape = (IMG_HEIGHT, IMG_WIDTH, IMG_CHANNELS)
 
 model = UNet()
-model.compile(optimizer=Adam(0.00001, beta_1=0.99, beta_2=0.99), loss=[total_loss], metrics=[jaccard_coef])
+model.compile(optimizer=Adam(0.0001, beta_1=0.99, beta_2=0.99), loss=[total_loss], metrics=[jaccard_coef])
 
 num_train_imgs = 5520
 callbacks = tf.keras.callbacks.ModelCheckpoint('/kaggle/working/mSMAD-{epoch}-{jaccard_coef}-{val_loss}.h5', period=5)
