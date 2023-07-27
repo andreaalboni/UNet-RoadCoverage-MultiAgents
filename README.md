@@ -12,6 +12,7 @@ Elenco e descrizione dei file presenti:
 - smooth_predictions_by_blending_patches.py -> file richiesto dal test, migliora la precisione della predizione
 - full_img_gmm.py                           -> nodo publisher ROS per casi in cui si analizza tutto l'ambiente
 - img_select_gmm.py                         -> nodo publisher ROS per casi in cui si vuole selezionare una sola parte dell'ambiente
+- print_pos.py                              -> consente di stampare sullo screenshot dell'ambiente la posizione finale dei droni, rappresentati da pallini verdi
 - Simulazioni                               -> cartella contenente i launch file dei vari scenari per le simulazioni
 
 ### Prerequisiti
