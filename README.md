@@ -26,9 +26,11 @@ Requisiti software per il training:
 
 ## Simulazioni
 
+Ai seguenti link sono disponibili per il download la cartella da inserire in ".../rotors_simulator/rotors_gazebo/models" e il file ".dae" di ciascuno degli scenari di simulazione:
 - [Env - Quartiere di Reggio](https://drive.google.com/drive/folders/1L25QgqlFMfakWQTzxJSdDt4-lm1PjnNi?usp=sharing)
 - [Env2 - Piazza del Colosseo](https://drive.google.com/drive/folders/1oCj5WPZFEup1hIQGeR_18bMNa0J6-P2m?usp=sharing)
 - [Env4 - Strade Deserte](https://drive.google.com/drive/folders/13jji2yHSe3YBYaXJBXi-htyltGrIq8ox?usp=sharing)  
+Per avviare una simulazione, dopo aver correttamente collocato la cartella e il file ".dae" dello scenario scelto, procedere con il lancio, da terminale, del file ".launch" relativo all'ambiente scelto. Successivamente all'apertura di Gazebo, runnare uno dei due, full_img o img_select, tipo di studio dell'ambiente. Per ultimo, runnare il file "env(scelto)_coverage" per avviare il pilotaggio dei droni.
 
 ## Deployment
 
