@@ -33,7 +33,7 @@ Link per il download dei modelli, in formato ".h5", pronti per l'utilizzo:
 
 ## Simulazioni
 
-Ai seguenti link sono disponibili per il download la cartella da inserire in ".../rotors_simulator/rotors_gazebo/models" e il file ".dae" di ciascuno degli scenari di simulazione:
+Ai seguenti link sono disponibili per il download la cartella da inserire in ".../rotors_simulator/rotors_gazebo/models", il file ".dae" di ciascuno degli scenari di simulazione da inserire in "/rotors_simulator/rotors_gazebo/worlds" e lo screenshot dell'ambiente da utilizzare per la visualizzazione delle posizioni finali mediante:
 - [Env - Quartiere di Reggio](https://drive.google.com/drive/folders/1L25QgqlFMfakWQTzxJSdDt4-lm1PjnNi?usp=sharing)
 - [Env2 - Piazza del Colosseo](https://drive.google.com/drive/folders/1oCj5WPZFEup1hIQGeR_18bMNa0J6-P2m?usp=sharing)
 - [Env4 - Strade Deserte](https://drive.google.com/drive/folders/13jji2yHSe3YBYaXJBXi-htyltGrIq8ox?usp=sharing)
