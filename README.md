@@ -1,44 +1,46 @@
 # Road Extraction and Building Detection from Aerial Imagery 
 
-L'obiettivo del progetto è creare e trainare due U-Net, CNN sviluppate per la segmentazione semantica, con lo scopo di, data un'immagine aerea, estrarre la rete 
-stradale ed individuare gli edifici presenti.  
+The goal of this project is to develop and train two U-Net models, convolutional neural networks (CNN) specifically designed for semantic segmentation. The objective is to extract road networks and identify buildings in aerial images. The predictions will be used to control a distributed system of drone agents, aiming to achieve optimal coverage of the road network within the environment.
 
 ## Getting Started
 
-Elenco e descrizione dei file presenti:
-- Unet.py                                   -> creazione della rete neurale, architettura U-Net
-- Train.py                                  -> train della rete neurale
-- Test.py                                   -> test della rete neurale su un'immagine di qualsiasi dimensione
-- smooth_predictions_by_blending_patches.py -> file richiesto dal test, migliora la precisione della predizione
-- full_img_gmm.py                           -> nodo publisher ROS per casi in cui si analizza tutto l'ambiente
-- img_select_gmm.py                         -> nodo publisher ROS per casi in cui si vuole selezionare una sola parte dell'ambiente
-- print_pos.py                              -> consente di stampare sullo screenshot dell'ambiente la posizione finale dei droni, rappresentati da pallini verdi
-- Simulazioni                               -> cartella contenente i launch file dei vari scenari per le simulazioni
+List and description of the files:
 
-### Prerequisiti
+- Unet.py: Defines the neural network architecture based on U-Net.
+- Train.py: Trains the neural network model.
+- Test.py: Tests the neural network on images of any dimension.
+- smooth_predictions_by_blending_patches.py: Enhances prediction accuracy by blending patches, required during testing.
+- full_img_gmm.py: ROS publisher node for cases where the entire environment is analyzed.
+- img_select_gmm.py: ROS publisher node for cases where only a selected part of the environment is analyzed.
+- print_pos.py: Prints the final positions of the drones as green dots on the environment screenshot.
+- Simulations: Folder containing the launch files for various simulation scenarios.
 
-Dataset necessari per il training delle CNN:
+### Prerequisites
+
+Datasets required for CNN training:
 - [Road Extraction Dataset](https://www.kaggle.com/datasets/balraj98/deepglobe-road-extraction-dataset)
 - [Massachusetts Buildings Dataset](https://www.kaggle.com/datasets/balraj98/massachusetts-buildings-dataset/code)
 
-Requisiti software per il training:
+Hardware prerequisites required for CNN training:
 - GPU con RAM >= 8Gb
 - NVIDIA GPU Drivers and [NVIDIA CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit)
 
 ## Deployment
 
-Link per il download dei modelli, in formato ".h5", pronti per l'utilizzo:
+Download links for pre-trained models in ".h5" format, ready for use:
 - [Road Extraction Model](https://drive.google.com/file/d/1dfdPuzAOjxv7tyFnCo3qPSDg3BL5kKfM/view?usp=sharing)
 - [Buildings Detection Model](https://drive.google.com/file/d/15yyEJvJOZt-Vyrrf1LVo7sACHjIAR_w8/view?usp=sharing)
 
-## Simulazioni
+## Simulations
 
-Ai seguenti link sono disponibili per il download la cartella da inserire in ".../rotors_simulator/rotors_gazebo/models", il file ".dae" di ciascuno degli scenari di simulazione da inserire in "/rotors_simulator/rotors_gazebo/worlds" e lo screenshot dell'ambiente da utilizzare per la visualizzazione delle posizioni finali mediante:
+The simulations were conducted using real-world images from Google Maps and performed in the Gazebo simulation environment.
+
+The following links provide downloads for the folder to be placed in .../rotors_simulator/rotors_gazebo/models, the ".dae" file for each simulation scenario to be placed in /rotors_simulator/rotors_gazebo/worlds, and a screenshot of the environment to be used for visualizing the final positions using:
 - [Env - Quartiere di Reggio](https://drive.google.com/drive/folders/1L25QgqlFMfakWQTzxJSdDt4-lm1PjnNi?usp=sharing)
 - [Env2 - Piazza del Colosseo](https://drive.google.com/drive/folders/1oCj5WPZFEup1hIQGeR_18bMNa0J6-P2m?usp=sharing)
 - [Env4 - Strade Deserte](https://drive.google.com/drive/folders/13jji2yHSe3YBYaXJBXi-htyltGrIq8ox?usp=sharing)
- 
-Per avviare una simulazione, dopo aver correttamente collocato la cartella e il file ".dae" dello scenario scelto, procedere con il lancio, da terminale, del file ".launch" relativo all'ambiente scelto. Successivamente, runnare uno delle due, full_img o img_select, tipologie di studio dell'ambiente, per intero o per selezione, decommentando le informazioni relative all'ambiente scelto. Per ultimo, runnare il file "env(scelto)_coverage" per avviare il pilotaggio dei droni. Runnare "print_pos" se si vuole visualizzare sull'immagine dell'ambiente dei pallini in corrispondenza della posizione finale dei droni.
+
+To start a simulation, first ensure the folder and ".dae" file for the chosen scenario are correctly placed. Then, launch the corresponding ".launch" file for the selected environment from the terminal. Next, run one of the two environment study types, either full_img for the entire environment or img_select for a selected area, uncommenting the relevant environment information. Finally, run the "env(chosen)_coverage" file to initiate drone piloting. Run "print_pos" if you wish to display dots on the environment image indicating the drones' final positions.
 
 ## Autore
 
