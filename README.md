@@ -53,11 +53,11 @@ The following links provide downloads for the folder to be placed in .../rotors_
 To start a simulation, first ensure the folder and ".dae" file for the chosen scenario are correctly placed. Then, launch the corresponding ".launch" file for the selected environment from the terminal. Next, run one of the two environment study types, either full_img for the entire environment or img_select for a selected area, uncommenting the relevant environment information. Finally, run the "env(chosen)_coverage" file to initiate drone piloting. Run "print_pos" if you wish to display dots on the environment image indicating the drones' final positions.
 
 
-The images below show the initial positions of the agents in simulation environment 4 and the final positions reached.
+The images below show the initial positions of the agents, red dots, in simulation environment 4 and the final positions reached.
 
 <p align="center">
-  <img src="Images/sim_initialpositions.png" alt="Env4, initial positions" width="25%" style="padding-right: 10px;">
-  <img src="Images/sim_finalpositions.png" alt="Env4, final positions" width="25%">
+  <img src="Images/sim_initialpositions.png" alt="Env4, initial positions" width="45%" style="padding-right: 10px;">
+  <img src="Images/sim_finalpositions.png" alt="Env4, final positions" width="45%">
 </p>
 
 ## Autore
