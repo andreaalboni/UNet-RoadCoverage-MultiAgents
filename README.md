@@ -2,6 +2,8 @@
 
 The goal of this project is to develop and train two U-Net models, convolutional neural networks (CNN) specifically designed for semantic segmentation. The objective is to extract road networks and identify buildings in aerial images. The predictions will be used to control a distributed system of drone agents, aiming to achieve optimal coverage of the road network within the environment.
 
+For more information about the project or simulations, refer to "AndreaAlboni_BachelorThesis.pdf."
+
 ## Getting Started
 
 List and description of the files:
