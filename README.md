@@ -60,6 +60,6 @@ The images below show the initial positions of the agents, red dots, in simulati
   <img src="Images/sim_finalpositions.png" alt="Env4, final positions" width="45%">
 </p>
 
-## Autore
+## Author
 
   - **Andrea Alboni** 
